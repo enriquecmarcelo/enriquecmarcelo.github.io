@@ -20,9 +20,26 @@
 }
 
 :root {
-    --background-color: #111;
-    --text-color: #fff;
-    --text-hover-color: #999;
+  /* --background-color: #0B0C10;
+  --dark-grey-color: #1F2833;
+  --dark-blue-color: #45A29E;
+  --light-blue-color: #66FCF1;
+  --text-color: #fff;
+  --text-hover-color: #C5C6C7; */
+
+  /* --background-color: #25274D;
+  --dark-grey-color: #464866;
+  --dark-blue-color: #29648A;
+  --light-blue-color: #2E9CCA;
+  --text-color: #fff;
+  --text-hover-color: #AAABB8;
+   */
+  --background-color: #222629;
+  --dark-grey-color: #474B4F;
+  --dark-blue-color: #61892F;
+  --light-blue-color: #86C232;
+  --text-color: #fff;
+  --text-hover-color: #6B6E70;
 }
 
 * {
@@ -47,7 +64,11 @@ a {
   cursor: pointer;
 }
 
-.unselectable {
+.default-cursor {
+  cursor: default;
+}
+
+.noselect {
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -56,6 +77,19 @@ a {
   -khtml-user-select: none;
 }
 
+.nodrag {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  /* user-drag: none; */
+}
+
+/* .notouch {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	cursor: default;
+} */
 
 .center {
   position: absolute;
@@ -81,7 +115,7 @@ a {
 }
 
 .red-color-transition:hover {
-  color: red;
+  color: var(--dark-blue-color);
 }
 
 .dotted-line {
@@ -90,11 +124,11 @@ a {
 }
 
 .contact a {
-  color: lightskyblue;
+  color: var(--light-blue-color);
 }
 
 .item a:hover {
-  color: lightseagreen;
+  color: var(--dark-blue-color);
 }
 
 .text-bold {
@@ -103,23 +137,6 @@ a {
 
 .nowrap {
   white-space: nowrap;
-}
-
-
-.button:hover {
-  background-color: lightseagreen;
-  /* color: var(--text-hover-color); */
-}
-
-.button {
-  background-color: lightskyblue;
-  border: none;
-  color: var(--text-color);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 
@@ -180,12 +197,12 @@ a {
 }
 
 .nav-items a:hover {
-  color: red;
+  color: var(--dark-blue-color);
 }
 
-.nav-items a.active {
-  color: red;
-}
+/* .nav-items a.active {
+  color: var(--light-blue-color);
+} */
 
 .dropdown-list {
   position: relative;
@@ -211,27 +228,15 @@ a {
   margin: 0 auto;
 }
 
-.dropdown-item {
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  /* padding: 14px 16px; */
-}
-
-.dropdown-item a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.dropdown-item a:hover {
-  color: red;
-}
-
 .dropdown-list:hover > ul {
   display: flex;
 }
 
-.dropdown-img svg {
+.dropdown-item {
+  background-color: var(--background-color);
+}
+
+.dropdown-item svg {
   width: 18px;
   height: 18px;
   fill: currentcolor;
@@ -276,12 +281,12 @@ a {
 /* Internship Page CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Button on main */
-.bot {
+/* .bot {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .inline-block {
   display: inline-block;
@@ -305,13 +310,13 @@ a {
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  background-color: darkslategrey;
 }
 
 .projects-section {
   position: relative;
   width: 100%;
   height: 100%;
+  top: 100vh;
   margin: 0px auto;
   padding: 150px 0px;
   display: flex;
@@ -331,15 +336,16 @@ a {
   width: 100%;
   font-size: 32px;
   white-space: nowrap;
+  color: var(--dark-blue-color);
 }
 
 .projects-section > h2::after {
+  position: relative;
   content: "";
   display: block;
   height: 1px;
   width: 300px;
-  background-color: var(--text-color);
-  position: relative;
+  background-color: var(--dark-blue-color);
   margin-left: 25px;
 }
 
@@ -355,7 +361,7 @@ a {
 }
 
 .project-layout a {
-  color: inherit; /* blue colors for links too */
+  color: var(--text-color); /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
 
@@ -407,8 +413,7 @@ a {
   position: relative;
   font-size: 13px;
   font-weight: normal;
-  color: rgb(100, 255, 218);
-  
+  color: var(--light-blue-color);
   margin: 10px 0px 5px;
   padding-top: 0px;
 }
@@ -420,14 +425,14 @@ a {
 
 .project-content > p {
   position: relative;
-  background-color: rgb(23, 42, 69);
+  background-color: var(--dark-grey-color);
   box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
   border-radius: 3px;
   padding: 25px;
   z-index: 2;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   font-size: 18px;
-  color: rgb(168, 178, 209);
+  color: var(--text-color);
 }
 
 .skills-list {
@@ -459,118 +464,4 @@ a {
   margin-left: 20px;
   margin-right: 0px;
 }
-
-
-
-
-
-
-
-/* 
-.projects { marks next section
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 100vh;
-}
-
-.projects-header {
-  position: relative;
-  top: 15%;
-}
-
-.projects-header > h2 {
-  position: relative;
-  left: -15%;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CSS for dropdown buttons in topnav */
-.dropdown {
-  float: left;
-}
-
-.dropdownbtn {
-  float: left;
-  color: var(--text-color);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.dropdown-content {
-  display: none;
-  width: 100%;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: var(--text-color);
-  padding: 14px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: red;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropdownbtn {
-  color: red;
-} 
 
