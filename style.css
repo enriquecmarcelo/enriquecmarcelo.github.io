@@ -191,6 +191,10 @@ a {
   position: relative;
 }
 
+.flex-override {
+  display: flex !important;
+}
+
 .dropdown-list > ul {
   position: absolute;
   top: 100%;
@@ -201,6 +205,10 @@ a {
   align-items: flex-start;
   width: 100%;
   height: 100%;
+}
+
+.dropdown-list > ul > li {
+  margin: 0 auto;
 }
 
 .dropdown-item {
@@ -221,6 +229,13 @@ a {
 
 .dropdown-list:hover > ul {
   display: flex;
+}
+
+.dropdown-img svg {
+  width: 18px;
+  height: 18px;
+  fill: currentcolor;
+  vertical-align: middle;
 }
 
 
