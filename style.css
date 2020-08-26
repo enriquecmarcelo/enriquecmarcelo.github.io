@@ -394,6 +394,10 @@ a {
   max-width: 700px;
 }
 
+.bg-colour {
+  background-color: var(--text-hover-color);
+}
+
 .project-content { 
   flex: 0 1 auto;
   display: flex;
