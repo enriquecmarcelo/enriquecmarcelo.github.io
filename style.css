@@ -20,26 +20,26 @@
 }
 
 :root {
-  /* --background-color: #0B0C10;
-  --dark-grey-color: #1F2833;
-  --dark-blue-color: #45A29E;
-  --light-blue-color: #66FCF1;
-  --text-color: #fff;
-  --text-hover-color: #C5C6C7; */
-
-  /* --background-color: #25274D;
-  --dark-grey-color: #464866;
-  --dark-blue-color: #29648A;
-  --light-blue-color: #2E9CCA;
-  --text-color: #fff;
-  --text-hover-color: #AAABB8;
-   */
-  --background-color: #222629;
-  --dark-grey-color: #474B4F;
-  --dark-blue-color: #61892F;
-  --light-blue-color: #86C232;
-  --text-color: #fff;
+  --dark-background-color: #222629;
+  --light-background-color: #474B4F;
+  --dark-highlight-color: #61892F;
+  --light-highlight-color: #86C232;
+  --text-color: #ebebeb;
+  --light-grey-text-color: #d7d7d7;
   --text-hover-color: #6B6E70;
+  --shadow-color: #020C1BB3;
+  --shadow-hover-color: #020C1BE6;
+
+  /* Bleu */
+  /* --dark-background-color: #0e1c27;
+  --light-background-color: #52828e;
+  --dark-highlight-color: #7da5a4;
+  --light-highlight-color: #9fbeb8;
+  --text-color: #eee9d5;
+  --light-grey-text-color: #e4decc;
+  --text-hover-color: #6B6E70;
+  --shadow-color: #020C1BB3;
+  --shadow-hover-color: #020C1BE6; */
 }
 
 * {
@@ -53,11 +53,16 @@ html {
 }
 
 body {
-    font-family: "Nexa";
-    background: var(--background-color);
+    font-family: "Open Sans", "Nexa";
+    font-weight: 400;
+    background: var(--dark-background-color);
     color: var(--text-color);
-    /* overflow:hidden; */
     line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Rubik", "Nexa";
+  font-weight: 300;
 }
 
 a { 
@@ -69,10 +74,10 @@ a {
 }
 
 .noselect {
-  -webkit-user-select: none; /* Safari */        
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
 }
@@ -82,7 +87,6 @@ a {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  /* user-drag: none; */
 }
 
 /* .notouch {
@@ -115,7 +119,7 @@ a {
 }
 
 .red-color-transition:hover {
-  color: var(--dark-blue-color);
+  color: var(--dark-highlight-color);
 }
 
 .dotted-line {
@@ -124,11 +128,7 @@ a {
 }
 
 .contact a {
-  color: var(--light-blue-color);
-}
-
-.item a:hover {
-  color: var(--dark-blue-color);
+  color: var(--light-highlight-color);
 }
 
 .text-bold {
@@ -153,9 +153,9 @@ a {
   pointer-events: auto !important;
   user-select: auto !important;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+  box-shadow: 0px 10px 30px -10px var(--shadow-color);
   z-index: 10;
-  background-color: var(--background-color);
+  background-color: var(--dark-background-color);
   top: 0px;
   padding: 0px 50px;
   width: 100%;
@@ -182,7 +182,6 @@ a {
   align-items: center;
   position: fixed;
   transition: top 0.3s;
-  /* No overflow so dropdowns work */
   z-index: 2;
 }
 
@@ -197,12 +196,8 @@ a {
 }
 
 .nav-items a:hover {
-  color: var(--dark-blue-color);
+  color: var(--text-hover-color);
 }
-
-/* .nav-items a.active {
-  color: var(--light-blue-color);
-} */
 
 .dropdown-list {
   position: relative;
@@ -233,7 +228,7 @@ a {
 }
 
 .dropdown-item {
-  background-color: var(--background-color);
+  background-color: var(--dark-background-color);
 }
 
 .dropdown-item svg {
@@ -248,7 +243,7 @@ a {
 /* Intro CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 .intro > h1 {
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   line-height: 1.2;
   text-align: left;
@@ -256,8 +251,9 @@ a {
 }
 
 .intro > p {
+  color: var(--light-grey-text-color);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   margin: 20px 0;
   text-align: left;
   text-shadow: 2px 4px 5px rgba(0,0,0, 0.3), 0 -5px 35px rgba(255, 255, 255, 0.3);
@@ -332,11 +328,12 @@ a {
   display: flex;
   -moz-box-align: center;
   align-items: center;
-  margin: 10px 0px 50px;
+  margin: 0px 0px 70px;
+  padding-top: 30px;
   width: 100%;
-  font-size: 32px;
+  font-size: 2rem;
   white-space: nowrap;
-  color: var(--dark-blue-color);
+  color: var(--dark-highlight-color);
 }
 
 .projects-section > h2::after {
@@ -345,7 +342,7 @@ a {
   display: block;
   height: 1px;
   width: 300px;
-  background-color: var(--dark-blue-color);
+  background-color: var(--dark-highlight-color);
   margin-left: 25px;
 }
 
@@ -384,12 +381,12 @@ a {
 
 .project-img {
   flex: 1 1 auto;
-  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+  box-shadow: var(--shadow-color) 0px 10px 30px -15px;
 }
 
 .project-img:hover {
   flex: 1 1 auto;
-  box-shadow: rgba(2, 12, 27, 0.9) 0px 20px 40px -15px;
+  box-shadow: var(--shadow-hover-color) 0px 20px 40px -15px;
 }
 
 .project-img > img {
@@ -413,20 +410,21 @@ a {
   position: relative;
   font-size: 13px;
   font-weight: normal;
-  color: var(--light-blue-color);
+  color: var(--light-highlight-color);
   margin: 10px 0px 5px;
   padding-top: 0px;
 }
 
 .project-content > h3 {
   position: relative;
+  font-size: 1.5rem;
   margin: 0px 0px 20px;
 }
 
 .project-content > p {
   position: relative;
-  background-color: var(--dark-grey-color);
-  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+  background-color: var(--light-background-color);
+  box-shadow: var(--shadow-color) 0px 10px 30px -15px;
   border-radius: 3px;
   padding: 25px;
   z-index: 2;
@@ -438,16 +436,23 @@ a {
 .skills-list {
   position: relative;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   z-index: 2;
   padding: 0px;
   margin: 25px 0px 10px;
   list-style: outside none none;
+  color: var(--light-grey-text-color);
 }
 
 .skill-item {
   margin-left: 0px;
   margin-right: 20px;
+  margin-top: 10px;
+}
+
+.skill-item > h4 {
+  font-size: 1.1rem;
 }
 
 .align-right {
@@ -463,5 +468,6 @@ a {
 .align-right .skill-item {
   margin-left: 20px;
   margin-right: 0px;
+  margin-top: 10px;
 }
 
