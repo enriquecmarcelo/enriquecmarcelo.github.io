@@ -276,14 +276,6 @@ a {
 
 /* Internship Page CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 
-/* Button on main */
-/* .bot {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 .inline-block {
   display: inline-block;
 }
@@ -358,26 +350,14 @@ a {
 }
 
 .project-layout a {
-  color: var(--text-color); /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: var(--text-color);
+  text-decoration: inherit;
 }
 
 .project-layout a:hover {
   color: var(--text-hover-color);
   transition:color .15s ease-in;
 }
-
-/* .img-container {
-  
-  max-width: 700px;
-} 
-
-.img-styling {
-  
-}
-
-*/
-
 
 .project-img {
   flex: 1 1 auto;
