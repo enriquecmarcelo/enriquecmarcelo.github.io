@@ -192,7 +192,7 @@ a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1rem;
 }
 
 .nav-items a:hover {
@@ -390,14 +390,14 @@ a {
   padding: 0 0 0 75px;
 }
 
-.project-content > h4 {
+/* .project-content > h4 {
   position: relative;
-  font-size: 13px;
+  font-size: 1.25rem;
   font-weight: normal;
   color: var(--light-highlight-color);
   margin: 10px 0px 5px;
   padding-top: 0px;
-}
+} */
 
 .project-content > h3 {
   position: relative;
@@ -413,7 +413,7 @@ a {
   padding: 25px;
   z-index: 2;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  font-size: 18px;
+  font-size: 1rem;
   color: var(--text-color);
 }
 
