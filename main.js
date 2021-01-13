@@ -8,4 +8,4 @@ window.onscroll = function() {
     document.getElementById("header").style.top = "-170px";
   }
   prevScrollpos = currentScrollPos;
-} 
+}
