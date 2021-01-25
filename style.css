@@ -49,6 +49,7 @@
 }
 
 html {
+  font-size: 105%;
   scroll-behavior: smooth;
 }
 
@@ -58,6 +59,23 @@ body {
     background: var(--dark-background-color);
     color: var(--text-color);
     line-height: 1.3;
+}
+
+/* Reminder to yoself to do the media queries */
+h1 {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 700px) { 
+  h1 { 
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1000px) {   
+  h1 {
+    font-size: 4.75rem;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -114,12 +132,18 @@ a {
 }
 
 
-.red-color-transition {
+.color-transition {
   transition:color .15s ease-in;
 }
 
-.red-color-transition:hover {
+a .color-transition:hover {
   color: var(--dark-highlight-color);
+}
+
+.item .color-transition:hover,
+.dropdown-item .color-transition:hover {
+  background-color: var(--light-background-color);
+  /* background-color: var(--shadow-hover-color); */
 }
 
 .dotted-line {
@@ -140,6 +164,8 @@ a {
 }
 
 
+/*#region Header*/
+
 /* Header CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 
 #header {
@@ -157,9 +183,9 @@ a {
   z-index: 10;
   background-color: var(--dark-background-color);
   top: 0px;
-  padding: 0px 50px;
+  padding: 0rem 3rem;
   width: 100%;
-  height: 70px;
+  height: 5rem;
 }
 
 .stylednav {
@@ -175,6 +201,8 @@ a {
   color: rgb(204, 214, 246);
   counter-reset: item 0;
   z-index: 12;
+  width: 100%;
+  height: 5rem;
 }
 
 .nav-items {
@@ -184,6 +212,12 @@ a {
   position: fixed;
   transition: top 0.3s;
   z-index: 2;
+  height: 5rem;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
 }
 
 .nav-items li {
@@ -192,10 +226,11 @@ a {
   transition-duration: 0.5s;
   /* list-style-type:none;
   text-transform:uppercase; */
+  /* height: 100%; */
 }
 
 .hidden li {
-  padding: 1rem;
+  padding: 0.1rem;
 }
 
 ul li ul {
@@ -203,7 +238,6 @@ ul li ul {
   display: flex;
   flex-direction: column;
   position: absolute;
-  /* left: 0; */
 }
 
 .hidden {
@@ -211,15 +245,10 @@ ul li ul {
   opacity: 0;
 }
 
-/* li > a {
-  position: relative;
-} */
-
 ul li:hover > ul,
 ul li ul:hover {
   visibility: visible;
   opacity: 1;
-  /* display: block; */
 }
 
 ul li ul li {
@@ -291,9 +320,12 @@ li a {
   vertical-align: middle;
 }
 
+/*#endregion Header*/
 
+/*#region Intro*/
 
 /* Intro CSS ----------------------------------------------------------------------------------------------------------------------------------- */
+
 .intro > h1 {
   font-size: 3.5rem;
   font-weight: 500;
@@ -325,7 +357,570 @@ li a {
   list-style-type: none;
 }
 
+/*#endregion Intro*/
 
+
+/*#region Template Page*/
+
+/* Project Page Template ----------------------------------------------------------------------------------------------------------------------------------- */
+
+#page {
+  width: 100%;
+}
+
+/* Add spacing between project and header */
+#project-container {
+  margin-top: 80px;
+  width: 100%;
+  /* opacity: 0; */
+}
+
+#project-container a {
+  color: var(--light-highlight-color);
+  text-decoration: none;
+}
+
+#project-container a:hover {
+  color: var(--dark-highlight-color);
+  transition:color .15s ease-in;
+}
+
+#project-container .img-link img {
+  flex: 1 1 auto;
+  box-shadow: var(--shadow-color) 0px 10px 30px -15px;
+}
+
+#project-container .img-link img:hover {
+  flex: 1 1 auto;
+  box-shadow: var(--shadow-hover-color) 0px 20px 40px -15px;
+}
+
+
+/* Set size of project page, set bg colour if you want a frame for it, add some padding */
+.project-contents-container {
+  max-width: 67vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--light-background-color);
+  border-radius: 5px;
+}
+
+/* Set up a flexbox, keeps bg sizing */
+.contents-flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1 1 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: row wrap;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flexbox-spacing {
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 1vw;
+  padding-left: 1vw; 
+}
+
+.project-title-container {
+  text-align: center;
+  color: var(--dark-highlight-color);
+}
+
+.project-title {
+  font-size: 3.5rem;
+}
+
+/* inside project-contents-container, sets sizing for content inside container */
+.project-contents {
+  width: 100%;
+  min-height: 200px;
+  /* padding: 1.25em; */
+  z-index: 1;
+}
+
+/* 
+.contents-flexbox > div {
+  position: relative;
+  display: inline;
+} */
+
+.project-facts-container {
+  margin-bottom: 20px;
+}
+
+.contents-text-block {
+  text-align: left;
+}
+
+.img-container {
+  width: auto;
+  height: auto;
+}
+
+.banner-container {
+  max-width: 80vw;
+  align-self: center;
+
+}
+
+.sqr-img-container {
+  max-width: 50%;
+
+}
+
+/* Test later, supposed to keep it sqred */
+.sqr-img-container::after {
+  content: "";
+  /* display: block; */
+  padding-bottom: 100%;
+}
+
+.portrait-container {
+  max-height: 60vw;
+}
+
+.img-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* these should be on a case-by-case-basis, unless its templated */
+.feature-portrait {
+  /* width: 300px; */
+  max-width: 300px;
+}
+
+/* these should be on a case-by-case-basis, unless its templated */
+.feature-banner {
+  /* height: 300px; */
+  max-height: 300px;
+
+}
+
+.about-text {
+  max-width: 35vw;
+}
+
+.contents-video-block {
+  width: 100%;
+  height: auto;
+}
+
+.contents-video-block video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*#endregion Template Page */
+
+/*#region Margin and Padding Utils*/
+
+/* Margin and Padding Utils, port to own css thing later */
+
+/* Margin */
+
+.m-auto {
+  margin: auto;
+}
+
+/* Top */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 0.25em !important;
+}
+
+.mt-2 {
+  margin-top: 0.5em !important;
+}
+
+.mt-3 {
+  margin-top: 1em !important;
+}
+
+.mt-4 {
+  margin-top: 1.5em !important;
+}
+
+.mt-5 {
+  margin-top: 3em !important;
+}
+
+/* Bottom */
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25em !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5em !important;
+}
+
+.mb-3 {
+  margin-bottom: 1em !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5em !important;
+}
+
+.mb-5 {
+  margin-bottom: 3em !important;
+}
+
+/* Left */
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.ml-1 {
+  margin-left: 0.25em !important;
+}
+
+.ml-2 {
+  margin-left: 0.5em !important;
+}
+
+.ml-3 {
+  margin-left: 1em !important;
+}
+
+.ml-4 {
+  margin-left: 1.5em !important;
+}
+
+.ml-5 {
+  margin-left: 3em !important;
+}
+
+/* Right */
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25em !important;
+}
+
+.mr-2 {
+  margin-right: 0.5em !important;
+}
+
+.mr-3 {
+  margin-right: 1em !important;
+}
+
+.mr-4 {
+  margin-right: 1.5em !important;
+}
+
+.mr-5 {
+  margin-right: 3em !important;
+}
+
+/* x - left and right */
+.mx-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.mx-1 {
+  margin-left: 0.25em !important;
+  margin-right: 0.25em !important;
+}
+
+.mx-2 {
+  margin-left: 0.5em !important;
+  margin-right: 0.5em !important;
+}
+
+.mx-3 {
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+}
+
+.mx-4 {
+  margin-left: 1.5em !important;
+  margin-right: 1.5em !important;
+}
+
+.mx-5 {
+  margin-left: 3em !important;
+  margin-right: 3em !important;
+}
+
+/* y - top and bottom */
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.my-1 {
+  margin-top: 0.25em !important;
+  margin-bottom: 0.25em !important;
+}
+
+.my-2 {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.my-3 {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+.my-4 {
+  margin-top: 1.5em !important;
+  margin-bottom: 1.5em !important;
+}
+
+.my-5 {
+  margin-top: 3em !important;
+  margin-bottom: 3em !important;
+}
+
+/* All */
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25em !important;
+}
+
+.m-2 {
+  margin: 0.5em !important;
+}
+
+.m-3 {
+  margin: 1em !important;
+}
+
+.m-4 {
+  margin: 1.5em !important;
+}
+
+.m-5 {
+  margin: 3em !important;
+}
+
+/* Padding */
+
+.p-auto {
+  padding: auto;
+}
+
+/* Top */
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pt-1 {
+  padding-top: 0.25em !important;
+}
+
+.pt-2 {
+  padding-top: 0.5em !important;
+}
+
+.pt-3 {
+  padding-top: 1em !important;
+}
+
+.pt-4 {
+  padding-top: 1.5em !important;
+}
+
+.pt-5 {
+  padding-top: 3em !important;
+}
+
+/* Bottom */
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pb-1 {
+  padding-bottom: 0.25em !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5em !important;
+}
+
+.pb-3 {
+  padding-bottom: 1em !important;
+}
+
+.pb-4 {
+  padding-bottom: 1.5em !important;
+}
+
+.pb-5 {
+  padding-bottom: 3em !important;
+}
+
+/* Left */
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pl-1 {
+  padding-left: 0.25em !important;
+}
+
+.pl-2 {
+  padding-left: 0.5em !important;
+}
+
+.pl-3 {
+  padding-left: 1em !important;
+}
+
+.pl-4 {
+  padding-left: 1.5em !important;
+}
+
+.pl-5 {
+  padding-left: 3em !important;
+}
+
+/* Right */
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.pr-1 {
+  padding-right: 0.25em !important;
+}
+
+.pr-2 {
+  padding-right: 0.5em !important;
+}
+
+.pr-3 {
+  padding-right: 1em !important;
+}
+
+.pr-4 {
+  padding-right: 1.5em !important;
+}
+
+.pr-5 {
+  padding-right: 3em !important;
+}
+
+/* x - left and right */
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.px-1 {
+  padding-left: 0.25em !important;
+  padding-right: 0.25em !important;
+}
+
+.px-2 {
+  padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
+}
+
+.px-3 {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.px-4 {
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
+}
+
+.px-5 {
+  padding-left: 3em !important;
+  padding-right: 3em !important;
+}
+
+/* y - top and bottom */
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.py-1 {
+  padding-top: 0.25em !important;
+  padding-bottom: 0.25em !important;
+}
+
+.py-2 {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+}
+
+.py-3 {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+}
+
+.py-4 {
+  padding-top: 1.5em !important;
+  padding-bottom: 1.5em !important;
+}
+
+.py-5 {
+  padding-top: 3em !important;
+  padding-bottom: 3em !important;
+}
+
+/* All */
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25em !important;
+}
+
+.p-2 {
+  padding: 0.5em !important;
+}
+
+.p-3 {
+  padding: 1em !important;
+}
+
+.p-4 {
+  padding: 1.5em !important;
+}
+
+.p-5 {
+  padding: 3em !important;
+}
+
+/*#endregion Margin and Padding Utils*/
+
+
+/*#region Internship Page CSS*/
 
 /* Internship Page CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -339,14 +934,13 @@ li a {
 
 .short-hr {
   width: 300px; 
-  /* text-align: center;  */
   border-bottom: 1px solid #000; 
   line-height: 0.1em;
   margin: 0 0.5rem 0.3rem;
 }
 
 .main-container {
-  padding: 0px 150px;
+  padding: 0px 200px;
   margin: 0px auto;
   width: 100%;
   max-width: 1600px;
@@ -395,8 +989,10 @@ li a {
 .project-layout {
   position: relative;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   flex: 1 1 100%;
+  width: 100%;
   min-height: 280px;
   border-top: 0;
   margin-bottom: 100px;
@@ -413,18 +1009,18 @@ li a {
 }
 
 .project-img {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
+  flex: 0 1 auto;
+}
+
+.project-img img {
+  max-width: 50vw;
+  max-height: 50vh;
   box-shadow: var(--shadow-color) 0px 10px 30px -15px;
 }
 
-.project-img:hover {
-  flex: 1 1 auto;
+.project-img img:hover {
   box-shadow: var(--shadow-hover-color) 0px 20px 40px -15px;
-}
-
-.project-img > img {
-  width: 600px;
-  max-width: 700px;
 }
 
 .bg-colour {
@@ -442,15 +1038,6 @@ li a {
 .align-right .project-content {
   padding: 0 0 0 75px;
 }
-
-/* .project-content > h4 {
-  position: relative;
-  font-size: 1.25rem;
-  font-weight: normal;
-  color: var(--light-highlight-color);
-  margin: 10px 0px 5px;
-  padding-top: 0px;
-} */
 
 .project-content > h3 {
   position: relative;
@@ -508,3 +1095,4 @@ li a {
   margin-top: 10px;
 }
 
+/*#endregion Internship Page CSS*/
