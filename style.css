@@ -58,7 +58,7 @@ body {
     font-weight: 400;
     background: var(--dark-background-color);
     color: var(--text-color);
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 /* Reminder to yoself to do the media queries */
