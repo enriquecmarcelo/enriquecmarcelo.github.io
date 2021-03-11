@@ -471,6 +471,7 @@ li a {
   z-index: 1;
 }
 
+
 /* 
 .contents-flexbox > div {
   position: relative;
@@ -1035,12 +1036,12 @@ li a {
 }
 
 .project-layout a {
-  color: var(--text-color);
+  color: var(--light-highlight-color);
   text-decoration: inherit;
 }
 
 .project-layout a:hover {
-  color: var(--text-hover-color);
+  color: var(--dark-highlight-color);
   transition:color .15s ease-in;
 }
 
