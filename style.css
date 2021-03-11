@@ -1222,10 +1222,16 @@ li a {
   .mobile-layout {
     display: none;
   }
+
 }
 
 /* hides web on smaller screens */
 @media only screen and (max-width: 800px) {
+  
+  .main-container {
+    padding: 0;
+  }
+  
   .project-layout {
     display: none;
   }
