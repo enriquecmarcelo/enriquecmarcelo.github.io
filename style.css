@@ -460,6 +460,7 @@ li a {
 
 .project-title {
   font-size: 3.5em;
+  text-shadow: 2px 2px rgba(0,0,0, 0.4);
 }
 
 /* inside project-contents-container, sets sizing for content inside container */
@@ -527,7 +528,7 @@ li a {
 /* these should be on a case-by-case-basis, unless its templated */
 .feature-banner {
   /* height: 300px; */
-  max-width: 18vw;
+  max-width: 13vw;
   /* max-height: 300px; */
 
 }
