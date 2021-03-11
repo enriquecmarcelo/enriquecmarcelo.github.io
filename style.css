@@ -1050,11 +1050,11 @@ li a {
   /* max-width: 50vw;
   max-height: 50vh; */
   flex: 0 1 auto;
-  transition: transform 0.5s;
+  transition: transform 0.1s ease-in;
 }
 
 .project-img:hover {
-  transform: scale(0.99);
+  transform: scale(0.98);
 }
 
 .project-img img {
@@ -1069,6 +1069,36 @@ li a {
 
 .project-img img:hover {
   box-shadow: var(--shadow-hover-color) 0px 1.2em 2.8em -1.2em;
+}
+
+.textnbuttonwrap {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  background-color: var(--light-background-color);
+  box-shadow: var(--shadow-color) 0px 10px 30px -15px;
+  border-radius: 3px;
+  padding: 1em;
+  z-index: 2;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.textnbuttonwrap a {
+  transition: transform 0.5s;
+}
+
+.textnbuttonwrap a:hover {
+  transform: scale(0.95);
+}
+
+.itch-button img {
+  max-width: 200px;
 }
 
 .bg-colour {
@@ -1160,13 +1190,13 @@ li a {
   width: 100%;
 
   background: var(--light-background-color);
-  transition: transform 0.5s;
+  transition: transform 0.1s ease-in;
   box-shadow: var(--shadow-color) 0px 10px 30px -15px;
 }
 
 .mobile-thumbnail:hover {
   color: var(--text-hover-color);
-  transform: scale(0.99);
+  transform: scale(0.98);
   box-shadow: var(--shadow-hover-color) 0px 20px 40px -15px;
 }
 
