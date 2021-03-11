@@ -441,7 +441,7 @@ li a {
 }
 
 .project-title {
-  font-size: 3.5rem;
+  font-size: 3.5em;
 }
 
 /* inside project-contents-container, sets sizing for content inside container */
@@ -502,7 +502,8 @@ li a {
 /* these should be on a case-by-case-basis, unless its templated */
 .feature-portrait {
   /* width: 300px; */
-  max-width: 300px;
+  width: 50vh;
+  max-height: 50vw;
 }
 
 /* these should be on a case-by-case-basis, unless its templated */
@@ -520,12 +521,18 @@ li a {
 .contents-video-block {
   width: 100%;
   height: auto;
+  margin: auto;
 }
 
 .contents-video-block video {
   max-width: 100%;
   max-height: 100%;
 }
+
+.contents-video-block iframe {
+  border: 0;
+}
+
 
 /*#endregion Template Page */
 
@@ -1016,6 +1023,11 @@ li a {
   /* max-width: 50vw;
   max-height: 50vh; */
   flex: 0 1 auto;
+  transition: transform 0.5s;
+}
+
+.project-img:hover {
+  transform: scale(0.99);
 }
 
 .project-img img {
@@ -1153,6 +1165,23 @@ li a {
   .project-img {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  /* For project pages */
+  .project-title {
+    font-size: 2.5em;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  .img-gallery {
+    display: none;
   }
 }
 
