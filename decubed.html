@@ -106,9 +106,15 @@
                                     <div class="contents-video-block py-3">
 
                                         <div>
-                                            <video autoplay="false" controls="true" preload="false">
-                                            <source src="vid/decubedplaythrough.mp4" type="video/mp4">
-                                            </video>
+                                            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                                            <div id="player"></div>
+
+                                            <!-- <iframe width="420" height="315"
+                                            src="https://www.youtube.com/watch?v=DWqfUMbUHxA">
+                                            </iframe>  -->
+                                            <!-- <video autoplay="false" controls="true" preload="false">
+                                            <source src="https://www.youtube.com/watch?v=DWqfUMbUHxA" type="video/mp4">
+                                            </video> -->
                                         </div>
                                         
                                     </div>
@@ -136,7 +142,7 @@
                                         </p>
                                         <p>
                                             A download for the game can be found
-                                            <a href="https://ishorty.itch.io/decubed?secret=l6a5UfYzKzHQxQlIF90kEn1hNo" target="_blank">
+                                            <a href="https://ishorty.itch.io/decubed" target="_blank">
                                             here.</a>
                                         </p>
                                         <br>
@@ -244,5 +250,6 @@
 
 
     <script src="main.js"></script>
+    <script src="embedyt.js"></script>
 </body>
 </html>

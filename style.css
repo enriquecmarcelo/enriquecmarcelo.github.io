@@ -547,10 +547,14 @@ li a {
   max-height: 100%;
 }
 
-.contents-video-block iframe {
-  border: 0;
+.contents-video-block #player {
+  margin: auto;
+  
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
 
 /*#endregion Template Page */
 
@@ -1171,7 +1175,6 @@ li a {
   font-size: 1em;
 }
 
-
 /* hides mobile on larger screens */
 @media only screen and (min-width: 800px) {
   .mobile-layout {
@@ -1206,6 +1209,12 @@ li a {
   .img-gallery {
     display: none;
   }
+
+  .contents-video-block iframe {
+    height: 195px;
+    width: 320px;
+  }
+
 }
 
 /*#endregion Init Page CSS*/
