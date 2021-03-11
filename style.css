@@ -529,7 +529,7 @@ li a {
 /* these should be on a case-by-case-basis, unless its templated */
 .feature-banner {
   /* height: 300px; */
-  max-width: 13vw;
+  max-width: 25vw;
   /* max-height: 300px; */
 
 }
