@@ -1229,7 +1229,7 @@ li a {
 @media only screen and (max-width: 800px) {
   
   .main-container {
-    padding: 0;
+    padding: 50px;
   }
   
   .project-layout {
@@ -1242,6 +1242,11 @@ li a {
   }
 
   /* For project pages */
+  .project-contents-container {
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
   .project-title {
     font-size: 2.5em;
   }
