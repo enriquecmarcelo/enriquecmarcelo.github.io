@@ -922,9 +922,9 @@ li a {
 /*#endregion Margin and Padding Utils*/
 
 
-/*#region Internship Page CSS*/
+/*#region Init Page CSS*/
 
-/* Internship Page CSS ----------------------------------------------------------------------------------------------------------------------------------- */
+/* Init Page CSS ----------------------------------------------------------------------------------------------------------------------------------- */
 
 .inline-block {
   display: inline-block;
@@ -1066,6 +1066,7 @@ li a {
   color: var(--text-color);
 }
 
+/* Obsolete, but keep in case we want this layout later */
 .skills-list {
   position: relative;
   display: flex;
@@ -1087,6 +1088,7 @@ li a {
 .skill-item > h4 {
   font-size: 1.1rem;
 }
+/* End obsolete */
 
 .align-right {
   text-align: right;
@@ -1104,7 +1106,57 @@ li a {
   margin-top: 10px;
 }
 
-/*#endregion Internship Page CSS*/
+.mobile-layout {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-thumbnail {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+
+  background: var(--light-background-color);
+  transition: transform 0.5s;
+  box-shadow: var(--shadow-color) 0px 10px 30px -15px;
+}
+
+.mobile-thumbnail:hover {
+  color: var(--text-hover-color);
+  transform: scale(0.99);
+  box-shadow: var(--shadow-hover-color) 0px 20px 40px -15px;
+}
+
+.mobile-thumbnail p {
+  text-align: center;
+  font-size: 1em;
+}
+
+
+/* hides mobile on larger screens */
+@media only screen and (min-width: 800px) {
+  .mobile-layout {
+    display: none;
+  }
+}
+
+/* hides web on smaller screens */
+@media only screen and (max-width: 800px) {
+  .project-layout {
+    display: none;
+  }
+
+  .project-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+/*#endregion Init Page CSS*/
 
 
 /* SLIDE SHOW ------------------------------ */
