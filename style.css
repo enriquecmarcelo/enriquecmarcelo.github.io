@@ -1253,7 +1253,7 @@ li a {
 @media only screen and (max-width: 800px) {
   /* For project pages */
   .project-title {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 /*#endregion Init Page CSS*/
