@@ -1249,6 +1249,13 @@ li a {
 
 }
 
+/* hides web on smaller screens */
+@media only screen and (max-width: 800px) {
+  /* For project pages */
+  .project-title {
+    font-size: 1.5em;
+  }
+}
 /*#endregion Init Page CSS*/
 
 
