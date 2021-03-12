@@ -490,7 +490,7 @@ li a {
 .collapsible {
   cursor: pointer;
   padding: 1em;
-  width: 10vw;
+  width: 100%;
   border: none;
   text-align: left;
   outline: none;
@@ -1408,9 +1408,6 @@ li a {
     padding-left: 50px;
     padding-right: 50px;
   }
-  .project-title {
-    font-size: 2.5em;
-  }
 
   .about-text {
     max-width: 100%;
@@ -1435,7 +1432,7 @@ li a {
 @media only screen and (max-width: 800px) {
   /* For project pages */
   .project-title {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 /*#endregion Init Page CSS*/
