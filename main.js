@@ -5,8 +5,10 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
+    // document.getElementById("mySidenav").style.top = "0";
   } else {
     document.getElementById("header").style.top = "-170px";
+    // document.getElementById("mySidenav").style.top = "-170px";
   }
   prevScrollpos = currentScrollPos;
 } 
@@ -60,3 +62,18 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 } 
 
+// For collapsible buttons
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}

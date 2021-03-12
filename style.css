@@ -486,6 +486,44 @@ li a {
   text-align: left;
 }
 
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  cursor: pointer;
+  padding: 1em;
+  width: 10vw;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+}
+
+.collapsible:hover {
+  background-color: var(--text-hover-color);
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 1em;
+  color: white;
+  float: right;
+  margin-left: 0.5em;
+}
+
+.collapsible-content {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.active:after {
+  content: "\2212";
+}
+
 .img-container {
   width: auto;
   height: auto;
@@ -1111,6 +1149,10 @@ li a {
 
 .itch-button img {
   max-width: 150px;
+}
+
+.gplay-button img {
+  max-width: 200px;
 }
 
 .bg-colour {
