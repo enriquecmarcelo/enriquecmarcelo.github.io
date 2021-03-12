@@ -56,7 +56,7 @@
                 </li>
                 
                 <li class="item color-transition dropdown-list">
-                    <a class="dropdown-list-header color-transition" href="mailto:enriquecmarcelo@gmail.com" rel="noopener noreferrer">Contact</a>
+                    <a class="dropdown-list-header color-transition" href="mailto:enriquecmarcelo@gmail.com" rel="noopener noreferrer">Contact Me</a>
                     <ul class="item flex-override">
                         <li class="dropdown-item">
                             <a class="color-transition" href="https://github.com/iShorty" target="_blank" rel="noopener noreferrer">
@@ -71,6 +71,52 @@
             
         </div>
     </div>
+
+    <div class="mobile-navbar">
+        <div class="mnavroot">
+            <div id="mySidenav" class="mnavbutton m-3">
+                    <img src="img/mobile/hamburgicon.png" alt="" onclick="openNav()">
+            </div>
+            <div id="sidepanel">
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="index.html" onclick="closeNav()">
+                        Home
+                    </a>
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="index.html#games" onclick="closeNav()">
+                        Projects
+                    </a>
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="https://drive.google.com/file/d/1l9Jhh03rFOzCsblhSOQDXUKh6I7GtRdj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        Resume
+                    </a>
+
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="mailto:enriquecmarcelo@gmail.com" rel="noopener noreferrer">
+                        Contact Me
+                    </a>
+
+                </div>
+
+
+            </div>
+            <div id="overlaypanel" onclick="closeNav()">
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="mobile-navbar">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div> -->
 
     <!-- END OF HEADER -->
 
@@ -223,15 +269,19 @@
                     
                     <div class="project-content">
                         <h3><a href="wondervalley.html">Wonder Valley</a></h3>
-                        <p>
-                            A singleplayer, tower defense PC game school project 
-                            where you play as Alice, a boy lost in wonderland.
-                            <br>
-                            <br>
-                            Build and move your allies to escort Alice 
-                            through waves of ever-increasing enemies. Reach the Queen’s Castle to win!
-                            <br>
-                        </p>
+                        <div class="textnbuttonwrap">
+                            <p>
+                                A singleplayer, tower defense PC game school project 
+                                where you play as Alice, a boy lost in wonderland.
+                                <br>
+                                <br>
+                                Build and move your allies to escort Alice 
+                                through waves of ever-increasing enemies. Reach the Queen’s Castle to win!
+                                <br>
+                                <br>
+                            </p>
+                            <a class="itch-button" href="https://ishorty.itch.io/wonder-valley"><img class="nodrag" src="img/itch/badge-color.png"></a>
+                        </div>
                     </div>
                     
                     <a class="project-img" href="wondervalley.html"><img src="img/wondervalley/gameplay1.jpg"></a>

@@ -11,6 +11,25 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 } 
 
+// Mobile navbar
+function openNav() {
+  document.getElementById("sidepanel").style.width = "50%";
+  document.getElementById("overlaypanel").style.width = "100%";
+  document.getElementById("sidepanel").style.right = 0;
+  document.getElementById("overlaypanel").style.right = 0;
+  // document.getElementById("sidepanel").style.display = "flex";
+  // document.getElementById("overlaypanel").style.display = "fixed";
+}
+
+function closeNav() {
+  // document.getElementById("sidepanel").style.width = "0";
+  // document.getElementById("overlaypanel").style.width = "0";
+  document.getElementById("sidepanel").style.right = "100%";
+  document.getElementById("overlaypanel").style.right = "100%";
+  // document.getElementById("sidepanel").style.display = "none";
+  // document.getElementById("overlaypanel").style.display = "none";
+}
+
 // Slideshow test
 var slideIndex = 1;
 showSlides(slideIndex);
