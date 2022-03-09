@@ -7,27 +7,65 @@
     <script src="https://kit.fontawesome.com/788ec5f987.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Rubik|Open+Sans' rel='stylesheet' type='text/css'>
-    <title>Internship Portfolio</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
     <div id="header">
         <div class="stylednav">
+
             <ul class="nav-items">
-                <li class="item"><a href="#" class="red-color-transition">Home</a></li>
-                <li class="item">
-                    <a href="#key" class="red-color-transition">Key Projects</a>
+
+                <li class="item color-transition">
+                    <a href="index.html" class="color-transition">Home</a>
                 </li>
-                <li class="item"><a href="#misc" class="red-color-transition">Misc</a></li>
-                <li class="item"><a class="red-color-transition"
-                        href="https://docs.google.com/document/d/1GhpfEY4hMrxAyp9hQ94mhQP0oLV1YOeZkJv9HINnqKU/edit?usp=sharing"
-                        target="_blank" rel="noopener noreferrer">Resume</a></li>
-                <li class="item dropdown-list">
-                    <a class="dropdown-list-header red-color-transition" href="mailto:enriquecmarcelo@gmail.com"
-                        rel="noopener noreferrer">Contact</a>
+
+                <li class="item">
+                    <a href="index.html#games" class="color-transition">Projects</a>
+                    <ul class="item color-transition dropdown-list hidden">
+                        <!-- <li class="dropdown-item">
+                            <a href="#spacerunners" class="color-transition">Spacerunners</a>
+                        </li> -->
+                        <li class="dropdown-item">
+                            <a href="haulaway.html" class="color-transition">Haul Away!</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="spacerunners.html" class="color-transition">SpaceRunners</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="hangryguardians.html" class="color-transition">Hangry Guardians</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="wondervalley.html" class="color-transition">Wonder Valley</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="https://www.razer.com/games/virus" class="color-transition">Razer Virus Web
+                                Game</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="Versaton.html" class="color-transition">Versaton</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="decubed.html" class="color-transition">Decubed</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="item color-transition">
+                    <a class="color-transition"
+                        href="https://drive.google.com/file/d/1l9Jhh03rFOzCsblhSOQDXUKh6I7GtRdj/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">Resume</a>
+                </li>
+
+                <li class="item color-transition dropdown-list">
+                    <a class="dropdown-list-header color-transition" href="mailto:enriquecmarcelo@gmail.com"
+                        rel="noopener noreferrer">Contact Me</a>
                     <ul class="item flex-override">
                         <li class="dropdown-item">
-                            <a class="red-color-transition" href="https://github.com/iShorty" target="_blank"
+                            <a class="color-transition" href="https://github.com/iShorty" target="_blank"
                                 rel="noopener noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 438.549 438.549">
                                     <title>GitHub</title>
@@ -39,168 +77,307 @@
                         </li>
                     </ul>
                 </li>
+
             </ul>
 
-
         </div>
     </div>
 
-    <div class="main-container">
+    <div class="mobile-navbar">
+        <div class="mnavroot">
+            <div id="mySidenav" class="mnavbutton m-3">
+                <img src="img/mobile/hamburgicon.png" alt="" onclick="openNav()">
+            </div>
+            <div id="sidepanel">
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="index.html" onclick="closeNav()">
+                        Home
+                    </a>
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="index.html#games" onclick="closeNav()">
+                        Projects
+                    </a>
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition"
+                        href="https://drive.google.com/file/d/1l9Jhh03rFOzCsblhSOQDXUKh6I7GtRdj/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer">
+                        Resume
+                    </a>
 
-        <div class="intro-projects">
-            <div class="intro center">
-                <h1 class="text-center">
-                    <span class="dotted-line">Hi, I'm Enrique Marcelo.</span>
-                </h1>
+                </div>
+                <div class="panelbutton py-3">
+                    <a class="color-transition" href="mailto:enriquecmarcelo@gmail.com" rel="noopener noreferrer">
+                        Contact Me
+                    </a>
 
-                <p class="text-center">
-                    I'm a programmer and designer, making games and websites.<br>
-                </p>
+                </div>
+
+
+            </div>
+            <div id="overlaypanel" onclick="closeNav()">
             </div>
         </div>
+    </div>
 
+    <!-- END OF HEADER -->
 
-        <div class="projects-section">
+    <!-- MAIN BODY -->
+    <div class="main-wrap">
 
-            <h2 id="key">Key Projects</h2>
+        <div class="main-container">
 
-            <div class="project-layout align-right">
-                <a class="project-img" href="https://www.razer.com/games/virus"><img src="img/viruswebgame.PNG"></a>
-                <div class="project-content">
-                    <h3><a href="https://www.razer.com/games/virus">Training Mode: Virus Edition</a></h3>
-                    <p>Created the front-end of a web clicker game, working in cohesion with a small team to deliver the
-                        game on a tight schedule. It is available now on Razers' website.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Git</li>
-                        <li class="skill-item">Terminal</li>
-                        <li class="skill-item">HTML5</li>
-                        <li class="skill-item">CSS</li>
-                        <li class="skill-item">JavaScript (ES6)</li>
-                        <li class="skill-item">Python</li>
-                        <li class="skill-item">Django</li>
-                        <li class="skill-item">Redis</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="intro-projects" style="padding-bottom: 100vh;">
+                <div class="intro center">
+                    <h1 class="text-center">
+                        <span class="dotted-line">Hi, I'm Enrique Marcelo.</span>
+                    </h1>
 
-            <div class="project-layout" id="key2">
-                <div class="project-content">
-                    <h3>Cybersecurity Research</h3>
-                    <p>Conducted research on cybersecurity, on a wide array of topics including but not limited to
-                        browsers, cyber attacks, viruses and social engineering.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Data Collection</li>
-                        <li class="skill-item">Critical Analysis</li>
-                    </ul>
-                </div>
-                <a class="project-img default-cursor"><img class="nodrag bg-colour" src="img/confidential.svg"></a>
-            </div>
-
-            <div class="project-layout align-right" id="key3">
-                <a class="project-img default-cursor"><img class="nodrag" src="img/OBSLive.jpg"></a>
-                <div class="project-content">
-                    <h3>OBS Live Project</h3>
-                    <p>Compiled OBS Live from it's source code using various tools and frameworks for research using
-                        Cmake to manage the build process of OBS, OBS Live and various dependencies. In order to read
-                        the source code post-compilation for research, I picked up C++.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Cmake</li>
-                        <li class="skill-item">C++</li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <h2 id="misc">Misc Projects</h2>
-
-            <div class="project-layout">
-                <div class="project-content">
-                    <h3>Razer Testing App</h3>
-                    <p>Wrote the front-end for a testing application, using primarily HTML, CSS, Typescript, npm,
-                        Node.js and Docker. This was an interesting project, as the creator of the project had
-                        structured it strangely. I used Node.js for various dependencies (primarily Webpack and Babel)
-                        and Docker for containerization of the application.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Webpack</li>
-                        <li class="skill-item">Typescript</li>
-                        <li class="skill-item">Babel</li>
-                        <li class="skill-item">Docker</li>
-                        <li class="skill-item">Node.js</li>
-                        <li class="skill-item">NPM</li>
-                    </ul>
-                </div>
-                <a class="project-img default-cursor"><img class="nodrag" src="img/testingapp.png"></a>
-            </div>
-
-            <div class="project-layout align-right">
-                <a class="project-img default-cursor"><img class="nodrag" src="img/servers.jpg"></a>
-                <div class="project-content">
-                    <h3>Goma Project</h3>
-                    <p>Investigated feasibility of setting up a distributed build system with Goma, using a BuildGrid
-                        server and bot as an RBE backend. It has applications with school, such as using a similar (but
-                        different) set up for Unity builds. Overkill, but possible.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Ubuntu</li>
-                        <li class="skill-item">Bash</li>
-                        <li class="skill-item">Goma</li>
-                        <li class="skill-item">BuildGrid</li>
-                    </ul>
-                    <!-- <p>Stuff I learned in a short list here</p> -->
-                </div>
-            </div>
-
-            <div class="project-layout">
-                <div class="project-content">
-                    <h3>NW.js Project</h3>
-                    <p>Built NW.js from source for research, using Chromium, Google's depot tools and Visual Studio.</p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">NW.js</li>
-                        <li class="skill-item">Chromium Toolchain</li>
-                        <li class="skill-item">Data Collection</li>
-                        <li class="skill-item">Critical Analysis</li>
-                    </ul>
-                </div>
-                <a class="project-img default-cursor"><img class="nodrag" src="img/nwjs.png"></a>
-            </div>
-
-            <div class="project-layout align-right">
-                <a class="project-img default-cursor"><img class="nodrag" src="img/research.png"></a>
-                <div class="project-content">
-                    <h3>Misc Research Projects</h3>
-                    <p>Conducted research on controller configurations, and investigated browser features for research.
+                    <p class="text-center">
+                        I'm a programmer and designer of games and websites.<br>
                     </p>
-                    <ul class="skills-list">
-                        <li class="skill-item">
-                            <h4>What I learned:</h4>
-                        </li>
-                        <li class="skill-item">Chromium Toolchain</li>
-                        <li class="skill-item">Data Collection</li>
-                        <li class="skill-item">Critical Analysis</li>
-                    </ul>
                 </div>
             </div>
 
+
+            <div class="projects-section">
+
+                <h2 id="games">Projects</h2>
+
+                <!-- Mobile section, hides when screen size too large -->
+                <div class="mobile-layout">
+
+                    <div class="mobile-thumbnail mb-5">
+                        <p>
+                            Haul Away!
+                        </p>
+
+                        <a class="project-img" href="haulaway.html">
+                            <img src="img/haulaway/poster.jpg">
+                        </a>
+                    </div>
+
+                    <div class="mobile-thumbnail mb-5">
+                        <p>
+                            SpaceRunners
+                        </p>
+
+                        <a class="project-img" href="spacerunners.html">
+                            <img class="nodrag" src="img/Spacerunners/runnerview2cropped.png">
+                        </a>
+                    </div>
+
+                    <div class="mobile-thumbnail mb-5">
+                        <p>
+                            Hangry Guardians
+                        </p>
+
+                        <a class="project-img" href="hangryguardians.html">
+                            <img src="img/hguardians/intro.jpg">
+                        </a>
+                    </div>
+
+                    <div class="mobile-thumbnail mb-5">
+                        <p>
+                            Wonder Valley
+                        </p>
+
+                        <a class="project-img" href="wondervalley.html">
+                            <img src="img/wondervalley/gameplay1.jpg">
+                        </a>
+                    </div>
+
+                    <div class="mobile-thumbnail mb-5">
+                        <p>
+                            Training Mode: Virus Edition
+                        </p>
+
+                        <a class="project-img" href="https://www.razer.com/games/virus">
+                            <img src="img/viruswebgame.PNG">
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Web section, hides when screen size too small -->
+                <div class="project-layout align-right" id="haulaway">
+
+                    <a class="project-img" href="haulaway.html"><img src="img/haulaway/poster.jpg"
+                            style="width: 20vw;"></a>
+
+                    <div class="project-content">
+                        <h3><a href="haulaway.html">Haul Away!</a></h3>
+                        <p>
+                            Haul Away! is the final year project for my course at Singapore Polytechnic.
+                            <br>
+                            It is a chaotic couch cooperative delivery game for 2-4 players.
+                            <br>
+                            <br>
+                            Set in the hectic high seas of Baboom Bay and
+                            hired by Shady Steve, gather your friends and
+                            coordinate as a crew to deliver goods before time runs out!
+                            <br>
+                            Take care to not lose your cargo to the dangers on the high seas!
+                            <br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="project-layout" id="spacerunners">
+
+                    <div class="project-content">
+                        <h3><a href="spacerunners.html">SpaceRunners</a></h3>
+                        <div class="textnbuttonwrap">
+                            <p>
+                                A competitive multiplayer networking PC game school project
+                                developed during Year 3 of my Polytechnic studies,
+                                from October to December 2020.
+                                <br>
+                                <br>
+                                A 3D platformer featuring asymmetric gameplay where
+                                one player plays as a space overlord and the others
+                                play as space runners.
+                                The overlords' goal is to destroy all the runners while
+                                the runners goal is to collect objectives on the map.
+                                <br>
+                                <br>
+                            </p>
+                            <a class="itch-button" href="https://ishorty.itch.io/spacerunners"><img class="nodrag"
+                                    src="img/itch/badge-color.png"></a>
+                        </div>
+                    </div>
+
+                    <a class="project-img" href="spacerunners.html"><img class="nodrag"
+                            src="img/Spacerunners/runnerview2cropped.png"></a>
+
+                </div>
+
+                <div class="project-layout align-right" id="hg">
+
+                    <a class="project-img" href="hangryguardians.html"><img src="img/hguardians/intro.jpg"></a>
+
+                    <div class="project-content">
+                        <h3><a href="hangryguardians.html">Hangry Guardians</a></h3>
+                        <div class="textnbuttonwrap">
+                            <p>
+                                A 2D mobile puzzle game app created for GameStart Asia.
+                                <br>
+                                Developed using the Unity Game Engine.
+                                <br>
+                                Developed by a team of 8 over the course of 15 weeks.
+                                <br>
+                                <br>
+                            </p>
+                            <a class="gplay-button"
+                                href="https://play.google.com/store/apps/details?id=com.ET.HangryGods"><img
+                                    class="nodrag" src="img/gplay/google-play-badge.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="project-layout" id="wondervalley">
+
+                    <div class="project-content">
+                        <h3><a href="wondervalley.html">Wonder Valley</a></h3>
+                        <div class="textnbuttonwrap">
+                            <p>
+                                A singleplayer, tower defense PC game school project
+                                where you play as Alice, a boy lost in wonderland.
+                                <br>
+                                <br>
+                                Build and move your allies to escort Alice
+                                through waves of ever-increasing enemies. Reach the Queen’s Castle to win!
+                                <br>
+                                <br>
+                            </p>
+                            <a class="itch-button" href="https://ishorty.itch.io/wonder-valley"><img class="nodrag"
+                                    src="img/itch/badge-color.png"></a>
+                        </div>
+                    </div>
+
+                    <a class="project-img" href="wondervalley.html"><img src="img/wondervalley/gameplay1.jpg"></a>
+
+                </div>
+
+                <div class="project-layout align-right" id="razervirus">
+
+                    <a class="project-img" href="https://www.razer.com/games/virus"><img src="img/viruswebgame.PNG"></a>
+
+                    <div class="project-content">
+                        <h3><a href="https://www.razer.com/games/virus">Training Mode: Virus Edition</a></h3>
+                        <p>A singleplayer web browser clicker game created during my internship at Razer.
+                            Players try to click as many viruses before time runs out.
+                            <br>
+                            It is available now on Razers' website
+                            <a href="https://www.razer.com/games/virus" target="_blank">
+                                here.</a>
+                        </p>
+                        <br>
+                    </div>
+
+                </div>
+
+                <div class="project-layout" id="versaton">
+
+                    <div class="project-content">
+                        <h3><a href="Versaton.html">Versaton</a></h3>
+                        <p>
+                            A multiplayer, team versus team card game client project for Singapore Polytechnic.
+                            <br>
+                            <br>
+                            Players form teams of 3, taking on the role of an Artist, Programmer and Designer
+                            trying to score more points than the enemy team. each role supports another.
+                            <br>
+                        </p>
+                    </div>
+
+                    <a class="project-img" href="Versaton.html"><img src="img/Versaton/programmerfinalcard.png"
+                            style="width: 20vw;"></a>
+
+                </div>
+
+                <div class="project-layout align-right" id="dcubed">
+
+                    <a class="project-img" href="decubed.html"><img class="nodrag"
+                            src="img/Decubed/Decubed Title.png"></a>
+
+                    <div class="project-content">
+                        <h3><a href="decubed.html">Decubed</a></h3>
+
+                        <div class="textnbuttonwrap">
+                            <p>
+                                A multiplayer, team versus team card game created for Singapore Polytechnic.
+                                <br>
+                                <br>
+                                Players form teams of 3, taking on the role of an Artist, Programmer and Designer, each
+                                role designed to support another.
+                                The team that scores more points than the enemy team wins!
+                                <br>
+                                <br>
+                            </p>
+                            <a class="itch-button" href="https://ishorty.itch.io/spacerunners"><img class="nodrag"
+                                    src="img/itch/badge-color.png"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END OF MAIN BODY -->
+
+        </div>
+
+        <div class="footer">
+            <span>Copyright © 2021 by Enrique Marcelo</span>
         </div>
 
     </div>
+
+
     <script src="main.js"></script>
 </body>
 
